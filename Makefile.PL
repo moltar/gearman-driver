@@ -33,7 +33,7 @@ test_requires(
 
 feature 'Gearman::XS',
   -default      => 0,
-  'Gearman::XS' => '0.10';
+  'Gearman::XS' => 0;
 
 my @tests = ( 't/*.t', 't/*/*.t' );
 
