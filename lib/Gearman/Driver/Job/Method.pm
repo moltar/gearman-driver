@@ -124,7 +124,7 @@ sub BUILD {
 
             printf "lastrun %d\n", time;
 
-            $self->worker->end(@args);
+            $self->worker->end(@args, $error);
 
             die $error if $error;
 
