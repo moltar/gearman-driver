@@ -119,6 +119,7 @@ sub BUILD {
                 $error = $@;
                 printf "lasterror %d\n",     time;
                 printf "lasterror_msg %s\n", $error;
+                $self->worker->on_exception( @args, $error );
             }
 
             printf "lastrun %d\n", time;
