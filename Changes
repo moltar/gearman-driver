@@ -1,6 +1,6 @@
 Revision history for Gearman-Driver
 
-TBD. to make shipit work properly
+0.02006     Fri Jan 13 2012
             - Finish job before killing the processes
             - Add --daemonize , let gearman-driver run as daemon
             - Gearman::XS worker run in non-blocking I/O mode, reduce CPU resource a bit.
