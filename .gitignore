@@ -13,3 +13,5 @@
 /MANIFEST.bak
 gearman_driver.log
 /examples/gearman_driver.log
+/MYMETA.json
+/MYMETA.yml
