@@ -828,13 +828,15 @@ sub BUILD {
 sub _setup_logger {
     my ($self) = @_;
 
-    Log::Log4perl->easy_init(
-        {
-            file   => sprintf( '>>%s', $self->logfile ),
-            layout => $self->loglayout,
-            level  => $self->loglevel,
-        },
-    );
+    unless (Log::Log4perl->initialized()) {
+        Log::Log4perl->easy_init(
+            {
+                file   => sprintf( '>>%s', $self->logfile ),
+                layout => $self->loglayout,
+                level  => $self->loglevel,
+            },
+        );
+    }
 }
 
 sub _start_observer {
